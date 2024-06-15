@@ -5,7 +5,8 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen overflow-hidden">
+      {/* Overlay for small screens */}
       <div
         className={`fixed inset-0 bg-gray-800 bg-opacity-50 transition-opacity lg:hidden ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -13,6 +14,7 @@ const Sidebar = () => {
         onClick={() => setIsOpen(false)}
       ></div>
 
+      {/* Sidebar */}
       <div
         className={`fixed inset-y-0 left-0 w-64 bg-gray-900 transition-transform transform lg:translate-x-0 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
@@ -30,22 +32,34 @@ const Sidebar = () => {
           </div>
           <ul className="flex flex-col flex-1">
             <li className="px-4 py-2">
-              <Link to="/" className="block px-4 py-2 mt-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+              <Link
+                to="/"
+                className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              >
                 Home
               </Link>
             </li>
             <li className="px-4 py-2">
-              <Link to="/login" className="block px-4 py-2 mt-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+              <Link
+                to="/login"
+                className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              >
                 Login
               </Link>
             </li>
             <li className="px-4 py-2">
-              <Link to="/register" className="block px-4 py-2 mt-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+              <Link
+                to="/register"
+                className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              >
                 Register
               </Link>
             </li>
             <li className="px-4 py-2">
-              <Link to="/note" className="block px-4 py-2 mt-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+              <Link
+                to="/note"
+                className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              >
                 Add Notes
               </Link>
             </li>
@@ -60,7 +74,9 @@ const Sidebar = () => {
         ☰
       </button>
 
-      <div className="flex-1 p-10"> {/* Your main content goes here */}</div>
+      <div className="flex-1 p-10 lg:ml-64 bg-gray-100"> {/* Main content area with bg color */}
+        {/* Your main content goes here */}
+      </div>
     </div>
   );
 };
