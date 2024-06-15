@@ -8,13 +8,13 @@ const Home = () => {
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1 bg-gray-200 p-10">
+      <div className="flex-1 bg-gray-200 p-4 sm:p-10">
         <div className="flex items-center justify-center h-full">
           <div className="text-center">
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-8">
               Welcome to NoteVerse Platform
             </h1>
-            <p className="text-lg md:text-xl text-gray-600">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600">
               Write, Edit, and Manage Notes at ease. Keep your Notes
               Confidential and Secure.
             </p>

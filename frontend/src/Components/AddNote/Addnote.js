@@ -31,10 +31,10 @@ const Addnote = ({ addlist, setAddlist }) => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto p-4">
       <div className="flex flex-wrap justify-around mt-12">
         {addlist.map((element) => (
-          <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg w-96 mb-8 mx-4 text-white" key={element._id}>
+          <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg w-full sm:w-96 mb-8 mx-4 text-white" key={element._id}>
             <div className="px-6 py-4">
               <div className="flex justify-between items-center mb-4">
                 <h1 className={`text-xl font-bold text-green-300 ${element.title.length > 14 ? "text-lg" : "text-xl"}`}>{element.title}</h1>

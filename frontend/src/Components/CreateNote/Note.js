@@ -159,7 +159,7 @@ const Note = () => {
     <div className="min-h-screen bg-gray-100 flex">
       <Navbar />
 
-      <div className="flex-1 p-4">
+      <div className="flex-1 p-4 lg:ml-64">
         <ToastContainer autoClose={2000} style={{ marginTop: "20px" }} />
 
         <Snackbar
