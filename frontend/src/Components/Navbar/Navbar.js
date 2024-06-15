@@ -30,22 +30,22 @@ const Sidebar = () => {
           </div>
           <ul className="flex flex-col flex-1">
             <li className="px-4 py-2">
-              <Link to="/" className="text-white hover:text-blue-300">
+              <Link to="/" className="block px-4 py-2 mt-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
                 Home
               </Link>
             </li>
             <li className="px-4 py-2">
-              <Link to="/login" className="text-white hover:text-blue-300">
+              <Link to="/login" className="block px-4 py-2 mt-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
                 Login
               </Link>
             </li>
             <li className="px-4 py-2">
-              <Link to="/register" className="text-white hover:text-blue-300">
+              <Link to="/register" className="block px-4 py-2 mt-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
                 Register
               </Link>
             </li>
             <li className="px-4 py-2">
-              <Link to="/note" className="text-white hover:text-blue-300">
+              <Link to="/note" className="block px-4 py-2 mt-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
                 Add Notes
               </Link>
             </li>
