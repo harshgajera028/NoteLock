@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Sidebar from "../Navbar/Navbar"; // Assuming Sidebar.js is in the same directory
 import logo from "./logo.png"; // Update the path to your logo
 
@@ -12,9 +13,8 @@ const Home = () => {
 
       {/* Main Content */}
       <div
-        className={`flex-1 bg-gradient-to-r from-blue-200 to-purple-200 p-4 sm:p-10 transition-all duration-300 ${
-          sidebarOpen ? "ml-64" : "ml-0"
-        }`}
+        className={`flex-1 bg-gradient-to-r from-blue-200 to-purple-200 p-4 sm:p-10 transition-all duration-300 ${sidebarOpen ? "ml-64" : "ml-0"
+          }`}
       >
         <div className="flex items-center justify-center h-full">
           <div className="text-center animate-fade-in">
@@ -26,9 +26,10 @@ const Home = () => {
               Write, Edit, and Manage Notes with ease. Keep your Notes Confidential and Secure.
             </p>
             <div className="space-y-4">
-              <button className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition-colors mb-4">
+
+              <Link to="/login" className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition-colors mb-4">
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         </div>
