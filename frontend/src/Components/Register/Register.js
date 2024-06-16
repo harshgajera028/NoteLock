@@ -111,7 +111,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-200">
+    <div className="flex min-h-screen bg-gradient-to-r from-blue-200 to-purple-200">
       <Sidebar />
       <div className="flex flex-grow items-center justify-center">
         <ToastContainer autoClose={2000} style={{ marginTop: "70px", marginRight: "-10px" }} />

@@ -33,16 +33,32 @@ const Addnote = ({ addlist, setAddlist }) => {
   return (
     <div className="container mx-auto p-4">
       <div className="flex flex-wrap justify-around mt-12">
-        {addlist.map((element) => (
+        {addlist.map((element, index) => (
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg w-full sm:w-96 mb-8 mx-4 text-white" key={element._id}>
             <div className="px-6 py-4">
               <div className="flex justify-between items-center mb-4">
-                <h1 className={`text-xl font-bold text-green-300 ${element.title.length > 14 ? "text-lg" : "text-xl"}`}>{element.title}</h1>
-                <button onClick={() => deletecards(element._id)} className="text-2xl text-yellow-400 focus:outline-none">
+                <span className="text-xl font-bold text-gray-200">Note No : {index + 1}</span>
+                <button onClick={() => deletecards(element._id)} className="text-2xl text-white focus:outline-none">
                   <i className="fa fa-trash" aria-hidden="true"></i>
                 </button>
               </div>
-              <textarea className="text-white bg-gray-700 p-4 rounded-lg w-full h-40 resize-none outline-none" value={element.description} readOnly />
+              <div className="mb-4">
+                <label className="block text-gray-200 text-sm font-bold mb-2">Title</label>
+                <input
+                  type="text"
+                  className="text-white bg-gray-700 p-4 rounded-lg w-full outline-none"
+                  value={element.title}
+                  readOnly
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-200 text-sm font-bold mb-2">Description</label>
+                <textarea
+                  className="text-white bg-gray-700 p-4 rounded-lg w-full h-40 resize-none outline-none"
+                  value={element.description}
+                  readOnly
+                />
+              </div>
             </div>
           </div>
         ))}

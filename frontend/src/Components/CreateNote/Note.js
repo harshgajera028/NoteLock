@@ -136,27 +136,27 @@ const Note = () => {
     }
   };
 
-  const LogOut = () => {
-    const token = localStorage.getItem("token");
+  // const LogOut = () => {
+  //   const token = localStorage.getItem("token");
 
-    if (!token) {
-      toast.error("Please Login First", { theme: "colored" });
-      setTimeout(() => {
-        navigate("/login");
-      }, 2000);
-      return;
-    }
+  //   if (!token) {
+  //     toast.error("Please Login First", { theme: "colored" });
+  //     setTimeout(() => {
+  //       navigate("/login");
+  //     }, 2000);
+  //     return;
+  //   }
 
-    localStorage.removeItem("token");
-    toast.success("Logged out successfully", { theme: "colored" });
-    setTimeout(() => {
-      navigate("/login");
-    }, 2000);
-    return;
-  };
+  //   localStorage.removeItem("token");
+  //   toast.success("Logged out successfully", { theme: "colored" });
+  //   setTimeout(() => {
+  //     navigate("/login");
+  //   }, 2000);
+  //   return;
+  // };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex">
+    <div className="min-h-screen bg-gradient-to-r from-blue-200 to-purple-200 flex">
       <Navbar />
 
       <div className="flex-1 p-4 lg:ml-64">
@@ -204,12 +204,12 @@ const Note = () => {
               >
                 Add Note
               </button>
-              <button
+              {/* <button
                 onClick={LogOut}
                 className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
                 Log Out
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

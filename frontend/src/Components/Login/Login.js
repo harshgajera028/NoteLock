@@ -34,7 +34,7 @@ const Login = () => {
   const LoginData = async () => {
     const { email, password } = user;
 
-    if (email && password) { // if email and password both exists
+    if (email && password) { // if email and password both exist
       if (validateEmail(email)) {
         if (password.length >= 6 && password.length <= 25) {
 
@@ -51,7 +51,7 @@ const Login = () => {
           catch (error) {
             toast.error("Error: " + error.response.data.message, {
               theme: "colored",
-            }); // error : user already registered or any other error
+            }); // error: user already registered or any other error
           }
 
         } else {
@@ -86,9 +86,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex min-h-screen bg-gradient-to-r from-blue-200 to-purple-200">
       <Sidebar />
-      <div className="flex-1 flex items-center justify-center h-screen bg-gray-200">
+      <div className="flex-1 flex items-center justify-center">
         <ToastContainer autoClose={2000} />
 
         <Snackbar

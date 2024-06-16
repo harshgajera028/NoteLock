@@ -62,7 +62,7 @@ const Sidebar = () => {
             <li className="px-4 py-2">
               <Link
                 to="/"
-                className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-200 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 onClick={() => setIsOpen(false)}
               >
                 Home
@@ -73,7 +73,7 @@ const Sidebar = () => {
                 <li className="px-4 py-2">
                   <Link
                     to="/note"
-                    className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                    className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-200 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
                     onClick={() => setIsOpen(false)}
                   >
                     Add Notes
@@ -82,7 +82,7 @@ const Sidebar = () => {
                 <li className="px-4 py-2">
                   <Link
                     onClick={LogOut}
-                    className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                    className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-200 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
                   >
                     Log Out
                   </Link>
@@ -93,7 +93,7 @@ const Sidebar = () => {
                 <li className="px-4 py-2">
                   <Link
                     to="/login"
-                    className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                    className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-200 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
                     onClick={() => setIsOpen(false)}
                   >
                     Login
@@ -102,7 +102,7 @@ const Sidebar = () => {
                 <li className="px-4 py-2">
                   <Link
                     to="/register"
-                    className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                    className="block px-4 py-2 mt-2 text-sm font-medium text-gray-200 bg-gray-700 rounded-lg hover:bg-gray-200 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
                     onClick={() => setIsOpen(false)}
                   >
                     Register
