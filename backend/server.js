@@ -16,6 +16,10 @@ const UserApi = require('./Routes/User.routes');
 const UserNotes = require("./Models/UserNotes");
 const NotesApi = require('./Routes/UserNotes.routes');
 
+// import Both Model and Routes of Password
+const Password = require("./Models/Password");
+const PasswordApi = require('./Routes/Password.routes');
+
 const app = express();
 
 // if you want to use json
@@ -35,6 +39,8 @@ app.use("/", UserApi);
 
 // Route ----> API for User Notes
 app.use("/", NotesApi);
+
+app.use("/",PasswordApi)
 
 app.get("/", (req, res) => {
   res.send("Server is working Afshan");
