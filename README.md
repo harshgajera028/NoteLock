@@ -1,4 +1,4 @@
-# NoteLock - Note Management Application (MERN Stack)📝🔐
+# NoteLock - A Secure NoteStoring Application📝🔐
 
 **NoteLock** is a secure note management application developed with the MERN stack. It enables users to create, manage, and securely store notes with enhanced security features. 🚀🔒
 
@@ -32,10 +32,12 @@ Follow these steps to get a local copy up and running.
    git clone https://github.com/harshgajera028/NoteLock.git
 
 2. Install NPM packages
-  `npm install`
+   ```sh
+   npm install
   
 3. Start the development server
-  `npm start`
+   ```sh
+   npm start
 
 ## Usage 📌
 
@@ -46,6 +48,4 @@ Once the application is running, you can begin using NoteLock. Here are some bas
 - Create, edit, and delete notes to manage your digital notebook.
 - Explore the user-friendly interface and navigate between different sections
 
-## Deployment
 
-I'm currently working on that.
