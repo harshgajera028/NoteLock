@@ -1,28 +1,24 @@
 # NoteLock - Note Management Application (MERN Stack)📝🔐
 
-**NoteLock** is a powerful and secure note management application developed using the MERN stack. It is designed to help users efficiently create, manage, securely store, and access their personal notes. With a robust stack that includes React, React Router, Axios, CSS, NodeJS, Express, MongoDB, Mongoose, and JSON Web Tokens (JWT), Note Verse offers a seamless user experience with enhanced security features. 🚀🔒
+**NoteLock** is a secure note management application developed with the MERN stack. It enables users to create, manage, and securely store notes with enhanced security features. 🚀🔒
 
 ## Key Features 🌟
 
-1. **User Registration and Login:** Users can effortlessly create an account by providing their Name, Email, and Password, enabling them to securely access their personal notes. 👤🔑
-
-2. **Password Security:** User passwords are securely hashed using bcrypt, adding an extra layer of protection against unauthorized access.  🔐🔒
-
-3. **Authentication & Authorization:** Backend authentication and authorization are seamlessly managed through JSON Web Tokens (JWT). This means that only authorized users can access their personal notes, enhancing the overall security of the application. 🔑🔒
-
-4. **Personal Note Management:** Upon logging in, users can create, edit, and delete personal notes, tailoring their digital notebook to their specific needs. The notes are stored securely within a MongoDB database, ensuring data confidentiality. 📓🔐
+1. **User Registration and Login:** Secure account creation with Name, Email, and Password. 👤🔑
+2. **Password Security:** Passwords are hashed using bcrypt for extra protection. 🔐
+3. **Authentication & Authorization:** Managed with JSON Web Tokens (JWT) for secure access. 🔑
+4. **Personal Note Management:** Create, edit, and delete notes, stored securely in MongoDB. 📓
 
 ## Tech Stack 💻
 
 - **Frontend:** React, React Router, Axios, TailwindCSS, MUI React, React Toastify
-  
-- **Backend:** Node.js, Expressjs, MongoDB, Mongoose, JWT (JSON Web Token)
+- **Backend:** Node.js, Express, MongoDB, Mongoose, JWT
 
 ## Getting Started 🚀
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Follow these steps to get a local copy up and running.
 
-### Prerequisites  📋
+### Prerequisites 📋
 
 - Node.js
 - npm
@@ -31,9 +27,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation 🛠️
 
-1. Clone the repo 
-  `git clone https://github.com/harshgajera028/NoteLock.git`
-  
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/harshgajera028/NoteLock.git
+
 2. Install NPM packages
   `npm install`
   
