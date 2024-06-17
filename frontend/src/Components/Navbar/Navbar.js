@@ -5,12 +5,16 @@ import { ToastContainer, toast } from "react-toastify";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if the user is logged in by checking the presence of a token
     const token = localStorage.getItem("token");
-    setIsLoggedIn(!!token);
+    if (token) {
+      setIsLoggedIn(true);
+      const storedUsername = localStorage.getItem("username");
+      setUsername(storedUsername);
+    }
   }, []);
 
   const LogOut = () => {
@@ -25,6 +29,7 @@ const Sidebar = () => {
     }
 
     localStorage.removeItem("token");
+    localStorage.removeItem("username");
     toast.success("Logged out successfully", { theme: "colored" });
     setTimeout(() => {
       navigate("/login");
@@ -58,6 +63,16 @@ const Sidebar = () => {
               ✕
             </button>
           </div>
+          {isLoggedIn && (
+            <div className="px-4 py-3 flex items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPJ9v5toYgVGvYgOZNQu6DtFKTclFGmb9fV-BoJWs3-q3Oj9knQ9dX08PhbnXJ1PwbjY&usqp=CAU" // Placeholder image, replace with actual user image URL
+                alt="User"
+                className="w-10 h-10 rounded-full mr-3"
+              />
+              <span className="text-lg font-medium text-gray-200">Hello {username}</span>
+            </div>
+          )}
           <ul className="flex flex-col flex-1">
             <li className="px-4 py-2">
               <Link

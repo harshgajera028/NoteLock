@@ -10,6 +10,11 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
 }
+@layer base {
+  body {
+    @apply font-montserrat;
+  }
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

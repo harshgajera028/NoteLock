@@ -1,23 +1,38 @@
 const Password = require("../Models/Password"); // import Password Model
 
-//import Error.js from Utils
+// Import Error.js from Utils
 const handleErrorResponse = require("../Utils/Error");
 
-// import Success.js from Utils
+// Import Success.js from Utils
 const handleSuccessResponse = require("../Utils/Success");
 
 // API ---> TO ADD PASSWORD
 exports.AddPassword = async (req, res) => {
   console.log(req.body);
-  const { title, password, website } = req.body;
+  const { website, username, password } = req.body;
 
-  // The authenticateJWT middleware will verify the token and attach decoded user information to req.user
+  console.log("REQ ID : ", req.user.id);
+  console.log("REQ USER", req.user);
+  console.log("REQ ", req);
+
   const userId = req.user.id;
 
+  console.log(userId);
+
   try {
-    const newPassword = await Password.create({ title, password, website, userId });
-    return handleSuccessResponse(res, 201, "Password Added Successfully", newPassword);
+    if (!website || !username || !password) {
+      throw new Error("Missing required fields");
+    }
+
+    const allPasswords = await Password.create({ website, username, password, userId });
+    return handleSuccessResponse(
+      res,
+      201,
+      "Password Added Successfully",
+      allPasswords
+    );
   } catch (error) {
+    console.error("Error in AddPassword:", error); // Log the error for debugging
     return handleErrorResponse(res, 500, "Server Error", error);
   }
 };
@@ -30,7 +45,12 @@ exports.GetPasswords = async (req, res) => {
     const allUserPasswords = await Password.find({ userId });
 
     if (!allUserPasswords) {
-      return handleErrorResponse(res, 404, "Token is invalid. Please log in again", null);
+      return handleErrorResponse(
+        res,
+        404,
+        "Token is invalid. Please log in again",
+        null
+      );
     }
 
     return handleSuccessResponse(res, 200, "Token Valid", allUserPasswords);
@@ -41,26 +61,31 @@ exports.GetPasswords = async (req, res) => {
 
 // API ---> TO DELETE PASSWORD
 exports.DeletePassword = async (req, res) => {
-  const { id } = req.body; // receive id from req.body/CLIENT
+  const { id } = req.body;
   const userId = req.user.id;
 
   try {
-    const deletePassword = await Password.findByIdAndDelete(id); // Delete the password by _id
+    const deletePassword = await Password.findByIdAndDelete(id);
 
     if (!deletePassword) {
-      return handleErrorResponse(res, 404, "Password not found or you don't have permission to delete it", null);
+      return handleErrorResponse(
+        res,
+        404,
+        "Password not found or you don't have permission to delete it",
+        null
+      );
     }
 
-    const AllUserPasswords = await Password.find({ userId }); // Fetch ALL passwords belonging to the userID
+    const AllUserPasswords = await Password.find({ userId });
 
     const obj = {
       ALLpasswords: AllUserPasswords,
       DeletedPassword: deletePassword,
     };
 
-    return handleSuccessResponse(res, 200, "Password Deleted successfully", obj);
+    return handleSuccessResponse(res, 200, "Password Deleted Successfully", obj);
   } catch (error) {
-    console.log("error in server", error);
+    console.log("Error in server", error);
     return handleErrorResponse(res, 500, "Server Error", error);
   }
 };

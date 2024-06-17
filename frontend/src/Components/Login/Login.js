@@ -41,7 +41,8 @@ const Login = () => {
           try {
             const response = await axios.post("http://localhost:4000/login", user)
             if (response.data.UserData.userToken) {
-              localStorage.setItem("token", response.data.UserData.userToken); // store token on user local storage
+              localStorage.setItem("token", response.data.UserData.userToken);
+              localStorage.setItem('username',response.data.UserData.LoginUser.name);
               toast.success(`${response.data.UserData.LoginUser.name} Login Successfully`, { theme: "colored" });
               setTimeout(() => {
                 navigate("/note"); // Redirect to the note page after 2 sec
