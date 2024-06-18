@@ -45,7 +45,7 @@ Once the application is running, you can begin using NoteLock. Here are some bas
 
 - Register a new account with your Name, Email, and Password.
 - Log in to access your personal notes.
-- Create, edit, and delete notes to manage your digital notebook.
+- Create and delete notes to manage your digital notebook.
 - Explore the user-friendly interface and navigate between different sections
 
 
